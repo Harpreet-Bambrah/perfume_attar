@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura & Essence - Premium Perfumes & Attars</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for Elegant Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37', // Classic luxury gold
+                            dark: '#AA8C2C',
+                            light: '#F3E5AB'
+                        },
+                        dark: {
+                            DEFAULT: '#121212',
+                            card: '#1E1E1E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-dark text-gray-200 font-sans antialiased selection:bg-gold selection:text-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-serif text-3xl font-bold text-gold tracking-wider">Aura<span class="text-white">&</span>Essence</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-300 hover:text-gold transition uppercase text-sm tracking-widest">Home</a>
+                    <a href="#collection" class="text-gray-300 hover:text-gold transition uppercase text-sm tracking-widest">Perfumes</a>
+                    <a href="#collection" class="text-gray-300 hover:text-gold transition uppercase text-sm tracking-widest">Attars</a>
+                    <a href="#" class="text-gray-300 hover:text-gold transition uppercase text-sm tracking-widest">About</a>
+                </div>
+                
+                <!-- Icons -->
+                <div class="flex items-center space-x-5">
+                    <button class="text-gray-300 hover:text-gold transition"><i class="fas fa-search text-lg"></i></button>
+                    <button class="text-gray-300 hover:text-gold transition"><i class="far fa-user text-lg"></i></button>
+                    <button class="text-gray-300 hover:text-gold transition relative group">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-2 -right-2 bg-gold text-dark text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-300 hover:text-gold ml-4"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80" alt="Luxury Perfume" class="w-full h-full object-cover opacity-50 scale-105 hover:scale-100 transition-transform duration-[10s]">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/40 to-dark"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <p class="text-gold uppercase tracking-[0.3em] text-sm md:text-base mb-4">Discover Your Signature Scent</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                The Essence of <br> Pure Elegance
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 font-light max-w-2xl mx-auto">
+                Explore our curated collection of luxury French perfumes and authentic, alcohol-free pure Attars crafted for royalty.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#collection" class="bg-gold hover:bg-gold-dark text-dark px-8 py-3 rounded uppercase tracking-widest font-bold text-sm transition duration-300 w-full sm:w-auto">
+                    Shop Perfumes
+                </a>
+                <a href="#collection" class="bg-transparent border border-gold text-gold hover:bg-gold hover:text-dark px-8 py-3 rounded uppercase tracking-widest font-bold text-sm transition duration-300 w-full sm:w-auto">
+                    Explore Attars
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Highlights -->
+    <section class="py-16 bg-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <i class="fas fa-spray-can text-3xl text-gold mb-4"></i>
+                    <h3 class="font-serif text-xl text-white mb-2">Eau De Parfum</h3>
+                    <p class="text-gray-400 text-sm">Long-lasting luxury fragrances for every occasion.</p>
+                </div>
+                <div class="p-6 border-y md:border-y-0 md:border-x border-gray-800">
+                    <i class="fas fa-tint text-3xl text-gold mb-4"></i>
+                    <h3 class="font-serif text-xl text-white mb-2">Pure Attars</h3>
+                    <p class="text-gray-400 text-sm">100% alcohol-free, traditional concentrated perfume oils.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-gift text-3xl text-gold mb-4"></i>
+                    <h3 class="font-serif text-xl text-white mb-2">Gift Sets</h3>
+                    <p class="text-gray-400 text-sm">Beautifully packaged collections for your loved ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section id="collection" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl text-white mb-4">Signature Collection</h2>
+                <div class="h-1 w-24 bg-gold mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Handpicked fragrances that define luxury and tradition, meticulously crafted from the finest ingredients worldwide.</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- JavaScript will inject product cards here -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-gray-600 text-gray-300 hover:border-gold hover:text-gold px-8 py-3 rounded uppercase tracking-widest text-sm transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-card border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <span class="font-serif text-2xl font-bold text-gold tracking-wider block mb-4">Aura<span class="text-white">&</span>Essence</span>
+                    <p class="text-gray-400 text-sm mb-6">Purveyors of fine fragrances. Bridging the gap between modern perfumery and traditional attar making.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Shop</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-gold transition">Luxury Perfumes</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Premium Attars</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Oud Collection</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Customer Care</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-gold transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Join The Club</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="bg-dark border border-gray-700 text-white px-4 py-2 w-full focus:outline-none focus:border-gold text-sm">
+                        <button class="bg-gold hover:bg-gold-dark text-dark px-4 py-2 font-bold transition">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Aura & Essence. Built for Demo Purposes.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to render products -->
+    <script>
+        // Mock Data for Perfumes & Attars
+        const products = [
+            {
+                id: 1,
+                name: 'Royal Oud Reserve',
+                category: 'Premium Attar',
+                price: '₹2,499',
+                type: 'attar',
+                image: 'https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 2,
+                name: 'Midnight Bloom EDP',
+                category: 'Luxury Perfume',
+                price: '₹3,200',
+                type: 'perfume',
+                image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 3,
+                name: 'Sandalwood Majesty',
+                category: 'Pure Attar',
+                price: '₹1,150',
+                type: 'attar',
+                image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 4,
+                name: 'Velvet Rose & Amber',
+                category: 'Eau de Parfum',
+                price: '₹2,850',
+                type: 'perfume',
+                image: 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 5,
+                name: 'Musk Al Ghazal',
+                category: 'Premium Attar',
+                price: '₹1,800',
+                type: 'attar',
+                image: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 6,
+                name: 'Oceanic Breeze',
+                category: 'Luxury Perfume',
+                price: '₹1,999',
+                type: 'perfume',
+                image: 'https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 7,
+                name: 'Majmua 96 Classic',
+                category: 'Traditional Attar',
+                price: '₹850',
+                type: 'attar',
+                image: 'https://images.unsplash.com/photo-1606170033648-5d55a3edf314?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                id: 8,
+                name: 'Imperial Leather',
+                category: 'Eau de Parfum',
+                price: '₹4,500',
+                type: 'perfume',
+                image: 'https://images.unsplash.com/photo-1528767221151-5121b64ff1e1?auto=format&fit=crop&w=600&q=80'
+            }
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+
+        products.forEach(product => {
+            // Badge color logic based on type
+            const badgeColor = product.type === 'attar' ? 'bg-gold text-dark' : 'bg-white text-dark';
+            const badgeText = product.type === 'attar' ? 'Alcohol Free' : 'Best Seller';
+
+            const cardHTML = `
+                <div class="bg-dark-card border border-gray-800 group overflow-hidden hover:border-gold transition duration-300">
+                    <!-- Image Area -->
+                    <div class="relative h-72 overflow-hidden bg-black">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute top-4 left-4 ${badgeColor} text-[10px] uppercase font-bold tracking-widest px-2 py-1">
+                            ${badgeText}
+                        </div>
+                        
+                        <!-- Quick Add Overlay (appears on hover) -->
+                        <div class="absolute -bottom-16 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent group-hover:bottom-0 transition-all duration-300 flex justify-center">
+                            <button class="bg-white hover:bg-gold text-dark font-bold py-2 px-6 w-full text-sm uppercase tracking-wider transition-colors duration-300 shadow-lg">
+                                Quick Add <i class="fas fa-shopping-bag ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Area -->
+                    <div class="p-6 text-center">
+                        <p class="text-gold text-xs uppercase tracking-widest mb-2">${product.category}</p>
+                        <h3 class="font-serif text-xl text-white mb-2 group-hover:text-gold transition">${product.name}</h3>
+                        <p class="text-gray-300 font-bold">${product.price}</p>
+                    </div>
+                </div>
+            `;
+            productGrid.insertAdjacentHTML('beforeend', cardHTML);
+        });
+    </script>
+</body>
+</html>
